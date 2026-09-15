@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Olha isso 👀</title>
+</head>
+
+<body style="text-align:center; margin-top:200px; font-family:Arial;">
+
+    <h1>Clique aqui 👀</h1>
+
+    <button onclick="tocarAudio()" style="font-size:25px; padding:20px;">
+        CONTINUAR
+    </button>
+
+    <audio id="som" src="./audio.mp3"></audio>
+
+    <script>
+        function tocarAudio() {
+            const audio = document.getElementById("som");
+
+            audio.play().catch(function(erro) {
+                alert("Não consegui reproduzir o áudio: " + erro);
+            });
+        }
+    </script>
+
+</body>
+</html>
